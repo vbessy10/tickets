@@ -29,6 +29,7 @@ socket.on('estadoActual', function(data) {
 });
 
 socket.on('ultimosCuatro', function(data) {
+    actualizaHTML(data.ultimosCuatro);
 
     var audio = new Audio('audio/new-ticket.mp3');
     let playPromise = audio.play();
